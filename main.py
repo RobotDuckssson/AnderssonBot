@@ -4,8 +4,6 @@ import time
 from TweetConfig import create_api
 from Weather import forecast
 from SolarInfo import SolarInfo
-from config import print_out
-
 
 def main():
     # Classes

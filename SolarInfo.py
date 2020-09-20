@@ -1,7 +1,6 @@
 import requests
 import datetime
 import time
-from config import print_out
 from config import solar_api_key
 from config import solar_site_id
 
