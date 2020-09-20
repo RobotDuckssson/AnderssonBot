@@ -1,0 +1,6 @@
+__pycahche__/
+.pytest/
+.pytest_cache/
+.vscode
+anderssonbot.code-workspace
+config.py
