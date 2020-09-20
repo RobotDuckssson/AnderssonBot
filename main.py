@@ -18,13 +18,11 @@ def main():
     savings_tweet = (f"Total CO2 saved: {solar.get_total_co2()}kg")
     lifetime_tweet = (f"Energy produced since October 1st 2019: {solar.get_lifetime_energy_production()}")
 
-    # print outs    
-    if print_out : print(daily_tweet)
-    if datetime.datetime.today().day == 27:
-        if print_out : print(monthly_tweet)
-
-    if print_out : print(savings_tweet)
-    if print_out : print(lifetime_tweet) 
+    # print outs
+    print(daily_tweet)
+    print(monthly_tweet)
+    print(savings_tweet)
+    print(lifetime_tweet) 
     
     '''
     api = create_api()
