@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 class WeatherObject:
 
     def __init__(self, temp, temp_max, temp_min, sky):

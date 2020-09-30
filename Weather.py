@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import json
 import urllib.request
 from WeatherObject import WeatherObject
