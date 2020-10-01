@@ -38,19 +38,23 @@ class SolarInfo(object):
     def __change_value(self, energy_kwh):
         energy_kwh = energy_kwh.lstrip()
         kWh_to_show = ""
+        str_split = energy_kwh.split(",")
         
-        if len(energy_kwh) > 3:
-            str_split = energy_kwh.split(",")
-            str_first = str(int(str_split[0]))
-            str_second = str(round(int(str_split[1]), -2))
-            
-            kWh_to_show = f"{str_first},{str_second[0]} "
+        str_first = str(int(str_split[0]))
+        str_second = str(round(int(str_split[1]), -2))    
+        kWh_to_show = f"{str_first},{str_second[0]} "
 
-            if len(energy_kwh) > 6:
-                kWh_to_show += "MWh"
-            else :
-                kWh_to_show += "kWh"
-
-        else :
+        # lifetime will not reach GWh
+        if len(str_split) == 3:
+            kWh_to_show += "MWh"
+        
+        if len(str_split) == 2:
+            kWh_to_show += "kWh"
+        if len(str_split) == 1:
             kWh_to_show = f"{energy_kwh } Wh" 
         return kWh_to_show
+
+        
+                
+
+        
