@@ -38,8 +38,7 @@ def main():
         api = create_api()
         api.update_status(savings_tweet)
         api = create_api()
-        api.update_status(lifetime_tweet)
-    
+        api.update_status(lifetime_tweet) 
     
 if __name__ == "__main__":
     main()

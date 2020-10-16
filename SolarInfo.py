@@ -40,9 +40,10 @@ class SolarInfo(object):
         kWh_to_show = ""
         str_split = energy_kwh.split(",")
         
-        str_first = str(int(str_split[0]))
-        str_second = str(round(int(str_split[1]), -2))    
-        kWh_to_show = f"{str_first},{str_second[0]} "
+        if len(str_split) > 1:    
+            str_first = str(int(str_split[0]))
+            str_second = str(round(int(str_split[1]), -2))    
+            kWh_to_show = f"{str_first},{str_second[0]} "
 
         # lifetime will not reach GWh
         if len(str_split) == 3:
